@@ -82,7 +82,7 @@ function App() {
     setLaps([...laps, lap]);
   }
 
-  export default function formatNumbers(number){
+  function formatNumbers(number){
     if (number<10){
         return "0"+number
     }
