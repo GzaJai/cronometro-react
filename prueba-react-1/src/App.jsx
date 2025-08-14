@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import formatNumbers from './utils/clock'
 import './App.css'
 
 function App() {
@@ -16,7 +13,7 @@ function App() {
 
     const secondCounter = setInterval(()=>{
       setSeconds((prev) => prev + 1)
-    }, 100)
+    }, 1000)
     
     return () => clearInterval(secondCounter)
 
@@ -84,6 +81,13 @@ function App() {
     
     setLaps([...laps, lap]);
   }
+
+  export default function formatNumbers(number){
+    if (number<10){
+        return "0"+number
+    }
+    return number
+}
 
 }
 
